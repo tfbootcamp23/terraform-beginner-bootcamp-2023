@@ -1,4 +1,11 @@
 terraform {
+  cloud {
+    organization = "tborg"
+
+    workspaces {
+      name = "terra-house-1"
+    }
+  }
   required_providers {
     random = {
       source  = "hashicorp/random"
@@ -8,6 +15,7 @@ terraform {
       source  = "hashicorp/aws"
       version = "5.16.2"
     }
+
   }
 }
 
