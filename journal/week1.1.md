@@ -14,3 +14,8 @@ https://developer.hashicorp.com/terraform/language/expressions/conditionals
 ### String Functions
 
 https://developer.hashicorp.com/terraform/language/expressions/strings
+
+
+## terraform local provisioner
+
+- TODO: Research getting local exec working on windows/powershell for aws cloudfront invalidation
