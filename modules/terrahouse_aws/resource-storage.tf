@@ -41,6 +41,7 @@ resource "aws_s3_object" "upload_assets" {
   bucket   = aws_s3_bucket.website_bucket.bucket
   key      = "assets/${each.key}"
   source   = "${var.assets_path}/${each.key}"
+  content_type = endswith("${var.assets_path}/${each.key}", "svg") ? "image/svg+xml" : "binary/octet-stream" 
   etag     = filemd5("${var.assets_path}${each.key}")
   lifecycle {
     replace_triggered_by = [terraform_data.content_version.output]
