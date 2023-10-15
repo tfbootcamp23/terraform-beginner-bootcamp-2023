@@ -1,4 +1,11 @@
 terraform {
+    cloud {
+    organization = "tborg"
+
+    workspaces {
+      name = "th-week-2"
+    }
+  }
   required_providers {
     terratowns = {
       source  = "local.providers/local/terratowns"
@@ -43,5 +50,5 @@ https://www.youtube.com/watch?v=PxOQriOSFdQ
 DESCRIPTION
   domain_name     = module.terrahouse_aws.cloudfront_url
   town            = "melomaniac-mansion"
-  content_version = 1
+  content_version = 2
 }
